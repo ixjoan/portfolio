@@ -105,8 +105,8 @@ export default function Hero() {
               2. Usa una URL externa de tu foto
             */}
             <img
-              src="/src/images/yo.webp"
-              alt="Foto de Joan Montero"
+              src="/images/yo.webp"
+              alt="Joan Montero"
             />
           </div>
 
