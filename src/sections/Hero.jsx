@@ -2,13 +2,7 @@ import './Hero.css'
 
 /* ================================================
    HERO - Sección principal (primera pantalla)
-   ================================================
-   Para personalizar:
-   - Cambia el nombre, título, subtítulo
-   - Cambia la foto (pon tu imagen en src/assets/)
-   - Cambia los links de GitHub/LinkedIn
-   - Cambia la ciudad y el idioma
-   ================================================ */
+   ================================================*/
 
 export default function Hero() {
   return (
@@ -27,16 +21,13 @@ export default function Hero() {
 
           {/* Nombre grande */}
           <h1 className="hero__name animate-fade-up-delay-2">
-            {/* 👇 CAMBIA ESTO POR TU NOMBRE */}
             {'Joan'}
             <span className="hero__name--highlight"> Montero</span>
           </h1>
 
           {/* Título y subtítulo */}
           <div className="hero__titles animate-fade-up-delay-3">
-            {/* 👇 CAMBIA ESTO POR TU TÍTULO */}
             <p className="hero__role">Ingeniero de Sistemas en formación</p>
-            {/* 👇 CAMBIA ESTO POR TU INSTITUCIÓN */}
             <p className="hero__subtitle">7° Ciclo - UPC</p>
           </div>
 
@@ -55,19 +46,16 @@ export default function Hero() {
           <div className="hero__meta animate-fade-up-delay-5">
             <span className="hero__meta-item">
               <span className="material-symbols-outlined">location_on</span>
-              {/* 👇 CAMBIA TU CIUDAD */}
               Lima, Perú
             </span>
             <span className="hero__meta-item">
               <span className="material-symbols-outlined">translate</span>
-              {/* 👇 CAMBIA TU NIVEL DE INGLÉS */}
               Inglés Intermedio
             </span>
           </div>
 
           {/* Links redes sociales */}
           <div className="hero__socials animate-fade-up-delay-5">
-            {/* 👇 CAMBIA EL HREF POR TU URL DE GITHUB */}
             <a
               href="https://github.com/ixjoan"
               target="_blank"
@@ -79,7 +67,6 @@ export default function Hero() {
               </svg>
               GitHub
             </a>
-            {/* 👇 CAMBIA EL HREF POR TU URL DE LINKEDIN */}
             <a
               href="https://www.linkedin.com/in/joan-monteroo/"
               target="_blank"
@@ -98,12 +85,6 @@ export default function Hero() {
         <div className="hero__photo-wrapper animate-fade-up-delay-3">
           <div className="hero__photo-glow" />
           <div className="hero__photo">
-            {/*
-              👇 CAMBIA el src por la ruta a tu foto.
-              Opciones:
-              1. Pon tu foto en src/assets/foto.jpg y escribe: src="/src/assets/foto.jpg"
-              2. Usa una URL externa de tu foto
-            */}
             <img
               src="/images/yo.webp"
               alt="Joan Montero"

@@ -2,19 +2,14 @@ import './Experience.css'
 
 /* ================================================
    EXPERIENCE - Línea de tiempo de Experiencia y Educación
-   ================================================
-   Para personalizar:
-   - Agrega o edita items en el array
-   - type: 'work' = punto morado | 'edu' = punto vacío
-   - side: 'left' | 'right' controla en qué lado va la tarjeta
-   ================================================ */
+   ================================================*/
 
 const timeline = [
   {
     side: 'left',
     type: 'work',
     date: 'Diciembre 2025 - Actualidad',
-    title: 'Agencia Online Consigue Ventas',   // 👇 CAMBIA POR TU EMPRESA
+    title: 'Agencia Online Consigue Ventas',
     role: 'Web Developer',
     items: [
       'Desarrollo de interfaces modernas y responsivas.',
@@ -26,7 +21,7 @@ const timeline = [
     side: 'right',
     type: 'edu',
     date: 'Agosto 2025 - Presente',
-    title: 'Universidad Peruana de Ciencias Aplicadas (UPC)', // 👇 TU UNIVERSIDAD
+    title: 'Universidad Peruana de Ciencias Aplicadas (UPC)',
     role: 'Ingeniería de Sistemas - 7° Ciclo',
     desc: 'Continuidad académica enfocada en la gestión estratégica de TI y arquitecturas de software complejas.',
   },
@@ -34,7 +29,7 @@ const timeline = [
     side: 'left',
     type: 'edu',
     date: '2023 - Julio 2025',
-    title: 'Instituto San Ignacio de Loyola (ISIL)',           // 👇 TU INSTITUTO
+    title: 'Instituto San Ignacio de Loyola (ISIL)',
     role: 'Técnico en Sistemas de Información',
     desc: 'Graduado con sólidos conocimientos en ciclo de vida de desarrollo y soporte técnico avanzado.',
   },

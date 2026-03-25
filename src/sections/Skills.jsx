@@ -1,27 +1,14 @@
 import './Skills.css'
 
-/* ================================================
-   SKILLS - Stack Tecnológico
-   ================================================
-   Para personalizar:
-   - Agrega o elimina skills en el array
-   - Cambia el color de cada una (color Tailwind-like)
-   - Cambia el icono (Material Symbols)
-   ================================================ */
-
 const skills = [
-  // 👇 EDITA ESTA LISTA CON TUS TECNOLOGÍAS
-  { name: 'Java',        icon: 'coffee',       color: '#f97316' },
-  { name: 'Spring Boot', icon: 'eco',          color: '#22c55e' },
-  { name: 'SQL Server',  icon: 'database',     color: '#3b82f6' },
-  { name: 'JavaScript',  icon: 'code_blocks',  color: '#eab308' },
-  { name: 'Power BI',    icon: 'bar_chart',    color: '#60a5fa' },
-  { name: 'Python',      icon: 'terminal',     color: '#818cf8' },
-  { name: 'HTML & CSS',  icon: 'html',         color: '#f97316' },
-  { name: 'Excel Avanz.',icon: 'table_chart',  color: '#4ade80' },
-  // Puedes añadir más aquí:
-  // { name: 'React', icon: 'hub', color: '#38bdf8' },
-  // { name: 'Git',   icon: 'merge_type', color: '#fb923c' },
+  { name: 'Java',        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+  { name: 'Spring Boot', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg' },
+  { name: 'React',       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+  { name: 'SQL Server',  logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-original.svg' },
+  { name: 'Python',      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+  { name: 'Power BI',    logo: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg' },
+  { name: 'JavaScript',  logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+  { name: 'Git',         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
 ]
 
 export default function Skills() {
@@ -39,11 +26,8 @@ export default function Skills() {
         <div className="skills__grid">
           {skills.map(skill => (
             <div key={skill.name} className="skill-card">
-              <div
-                className="skill-card__icon"
-                style={{ color: skill.color, background: `${skill.color}18` }}
-              >
-                <span className="material-symbols-outlined">{skill.icon}</span>
+              <div className="skill-card__icon">
+                <img src={skill.logo} alt={skill.name} width="40" height="40" />
               </div>
               <span className="skill-card__name">{skill.name}</span>
             </div>

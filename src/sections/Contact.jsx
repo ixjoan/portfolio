@@ -3,17 +3,11 @@ import './Contact.css'
 
 /* ================================================
    CONTACT - Footer + Contacto Directo
-   ================================================
-   Para personalizar:
-   - Cambia tu número de WhatsApp
-   - Cambia tu email
-   - Cambia el año del copyright y tu nombre
-   ================================================ */
+   ================================================*/
 
 export default function Contact() {
   const [copied, setCopied] = useState(false)
 
-  // 👇 CAMBIA ESTE EMAIL POR EL TUYO
   const email = 'monterojoanx23@gmail.com'
 
   const copyEmail = () => {
@@ -37,7 +31,6 @@ export default function Contact() {
         {/* Cards */}
         <div className="contact__grid">
           {/* WhatsApp */}
-          {/* 👇 CAMBIA EL NÚMERO DE WHATSAPP */}
           <a
             href="https://wa.me/51992899715"
             target="_blank"
@@ -49,7 +42,6 @@ export default function Contact() {
             </div>
             <div className="contact-card__info">
               <h3>Teléfono</h3>
-              {/* 👇 CAMBIA TU NÚMERO */}
               <p>+51 992 899 715</p>
             </div>
             <div className="contact-card__arrow">
@@ -78,7 +70,6 @@ export default function Contact() {
 
         {/* Copyright */}
         <div className="contact__footer">
-          {/* 👇 CAMBIA AÑO Y NOMBRE */}
           <p>© 2026 Joan Montero. Todos los derechos reservados.</p>
           <p className="contact__made-with">
             Hecho con React + Vite ⚡

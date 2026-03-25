@@ -9,11 +9,7 @@ import './App.css'
 
 /* ================================================
    APP.JSX - Archivo principal
-   ================================================
-   Aquí se juntan todas las secciones.
-   Si quieres agregar o quitar secciones,
-   solo agrega o elimina el componente aquí.
-   ================================================ */
+   ================================================*/
 
 export default function App() {
   return (

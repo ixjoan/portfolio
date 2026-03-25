@@ -2,19 +2,13 @@ import './Projects.css'
 
 /* ================================================
    PROJECTS - Certificaciones y Proyectos
-   ================================================
-   Para personalizar:
-   - Edita el array projects con tus proyectos reales
-   - Cambia la imagen (puedes usar una URL o ruta local)
-   - Agrega tu link de GitHub en githubUrl
-   ================================================ */
+   ================================================*/
 
 const projects = [
   {
     title: 'Análisis de Datos Empresariales',
     desc: 'Dashboard avanzado en Power BI para la visualización de KPIs críticos y optimización de toma de decisiones.',
     tags: ['Power BI', 'SQL Server'],
-    // 👇 Reemplaza con la URL de tu proyecto o imagen
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
     githubUrl: '#',
   },
@@ -32,20 +26,11 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&q=80',
     githubUrl: '#',
   },
-  // Puedes agregar más proyectos aquí:
-  // {
-  //   title: 'Mi Otro Proyecto',
-  //   desc: 'Descripción...',
-  //   tags: ['React', 'Vite'],
-  //   image: '...',
-  //   githubUrl: 'https://github.com/...',
-  // },
 ]
 
 const certifications = [
   { name: 'IT Essentials (2023)', org: 'CISCO' },
   { name: 'CCNA: Intro (2023)', org: 'CISCO' },
-  // 👇 Agrega tus certificaciones aquí
 ]
 
 export default function Projects() {

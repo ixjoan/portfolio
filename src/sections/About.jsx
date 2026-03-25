@@ -2,11 +2,7 @@ import './About.css'
 
 /* ================================================
    ABOUT - Sección "Sobre Mí"
-   ================================================
-   Para personalizar:
-   - Cambia el texto de descripción
-   - Cambia las 3 tarjetas de valores
-   ================================================ */
+   ================================================*/
 
 export default function About() {
   const values = [
@@ -35,7 +31,6 @@ export default function About() {
           <div className="section-divider" />
         </div>
 
-        {/* 👇 CAMBIA ESTA DESCRIPCIÓN POR LA TUYA */}
         <p className="about__text">
           Profesional con sólida base técnica en sistemas y experiencia en entornos ágiles.
           Combino habilidades de desarrollo de software con un fuerte interés por el análisis
