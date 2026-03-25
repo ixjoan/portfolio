@@ -1,0 +1,137 @@
+import './Hero.css'
+
+/* ================================================
+   HERO - Sección principal (primera pantalla)
+   ================================================
+   Para personalizar:
+   - Cambia el nombre, título, subtítulo
+   - Cambia la foto (pon tu imagen en src/assets/)
+   - Cambia los links de GitHub/LinkedIn
+   - Cambia la ciudad y el idioma
+   ================================================ */
+
+export default function Hero() {
+  return (
+    <section className="hero">
+      {/* Fondo decorativo */}
+      <div className="hero__bg-glow" />
+
+      <div className="hero__inner container">
+        {/* Columna izquierda - Texto */}
+        <div className="hero__content">
+          {/* Badge de disponibilidad */}
+          <div className="badge animate-fade-up-delay-1">
+            <span className="dot" />
+            Abierto a nuevas oportunidades
+          </div>
+
+          {/* Nombre grande */}
+          <h1 className="hero__name animate-fade-up-delay-2">
+            {/* 👇 CAMBIA ESTO POR TU NOMBRE */}
+            {'Joan'}
+            <span className="hero__name--highlight"> Montero</span>
+          </h1>
+
+          {/* Título y subtítulo */}
+          <div className="hero__titles animate-fade-up-delay-3">
+            {/* 👇 CAMBIA ESTO POR TU TÍTULO */}
+            <p className="hero__role">Ingeniero de Sistemas en formación</p>
+            {/* 👇 CAMBIA ESTO POR TU INSTITUCIÓN */}
+            <p className="hero__subtitle">7° Ciclo - UPC</p>
+          </div>
+
+          {/* Botones CTA */}
+          <div className="hero__ctas animate-fade-up-delay-4">
+            <a href="#projects" className="btn btn--primary">
+              <span className="material-symbols-outlined">rocket_launch</span>
+              Proyectos Destacados
+            </a>
+            <a href="#contact" className="btn btn--secondary">
+              Hablemos
+            </a>
+          </div>
+
+          {/* Info adicional */}
+          <div className="hero__meta animate-fade-up-delay-5">
+            <span className="hero__meta-item">
+              <span className="material-symbols-outlined">location_on</span>
+              {/* 👇 CAMBIA TU CIUDAD */}
+              Lima, Perú
+            </span>
+            <span className="hero__meta-item">
+              <span className="material-symbols-outlined">translate</span>
+              {/* 👇 CAMBIA TU NIVEL DE INGLÉS */}
+              Inglés Intermedio
+            </span>
+          </div>
+
+          {/* Links redes sociales */}
+          <div className="hero__socials animate-fade-up-delay-5">
+            {/* 👇 CAMBIA EL HREF POR TU URL DE GITHUB */}
+            <a
+              href="https://github.com/ixjoan"
+              target="_blank"
+              rel="noreferrer"
+              className="hero__social-btn"
+            >
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              GitHub
+            </a>
+            {/* 👇 CAMBIA EL HREF POR TU URL DE LINKEDIN */}
+            <a
+              href="https://www.linkedin.com/in/joan-monteroo/"
+              target="_blank"
+              rel="noreferrer"
+              className="hero__social-btn"
+            >
+              <svg width="20" height="20" fill="#0077b5" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        {/* Columna derecha - Foto */}
+        <div className="hero__photo-wrapper animate-fade-up-delay-3">
+          <div className="hero__photo-glow" />
+          <div className="hero__photo">
+            {/*
+              👇 CAMBIA el src por la ruta a tu foto.
+              Opciones:
+              1. Pon tu foto en src/assets/foto.jpg y escribe: src="/src/assets/foto.jpg"
+              2. Usa una URL externa de tu foto
+            */}
+            <img
+              src="/src/images/yo.png"
+              alt="Foto de Joan Montero"
+            />
+          </div>
+
+          {/* Badge flotante */}
+          <div className="hero__float-badge">
+            <span className="material-symbols-outlined">analytics</span>
+            <div>
+              <p className="hero__float-label">Perfil</p>
+              <p className="hero__float-value">Data &amp; Dev Focus</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Barra de especialidades */}
+      <div className="hero__specialties">
+        <div className="hero__specialties-inner container">
+          {['Web Dev', 'Data Analysis', 'Process Optimization', 'Agile Teams'].map(item => (
+            <div key={item} className="hero__specialty-item">
+              <span className="material-symbols-outlined">fiber_manual_record</span>
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
