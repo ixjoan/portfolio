@@ -3,11 +3,7 @@ import './Navbar.css'
 
 /* ================================================
    NAVBAR - Menú de navegación sticky
-   ================================================
-   Para personalizar:
-   - Cambia "Tu Nombre" por tu nombre real
-   - Cambia los links del nav si añades más secciones
-   ================================================ */
+   ================================================*/
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -35,7 +31,6 @@ export default function Navbar() {
           <span className="navbar__logo-icon">
             <span className="material-symbols-outlined">code</span>
           </span>
-          {/* 👇 CAMBIA ESTO POR TU NOMBRE */}
           <span className="navbar__logo-text">Joan Montero</span>
         </a>
 

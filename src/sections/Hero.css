@@ -272,11 +272,15 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 70px;
+  }
   .hero__inner {
     flex-direction: column-reverse;
     text-align: center;
     align-items: center;
     gap: 32px;
+    padding-top: 20px;
   }
   .hero__photo-wrapper {
     width: 220px;
@@ -287,10 +291,23 @@
   .hero__meta {
     justify-content: center;
   }
+  /* FIX: nombre ya no se sale del contenedor */
+  .hero__name {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+    white-space: nowrap;
+    overflow: visible;
+  }
   .hero__name--highlight {
-    display: inline;
+    display: block;
   }
-  .badge.animate-fade-up-delay-1{
+  /* FIX: badge centrado */
+  .badge.animate-fade-up-delay-1 {
     justify-content: center;
+    align-self: center;
   }
+  @media (min-width: 769px) and (max-width: 900px) {
+  .hero__name {
+    font-size: 3rem;
+  }
+}
 }

@@ -10,19 +10,18 @@
 
 .timeline__line {
   position: absolute;
-  left: 50%;
+  left: calc(50% - 1px);
   top: 0;
   bottom: 0;
   width: 2px;
   background: var(--border);
-  transform: translateX(-50%);
 }
 
 /* Cada item ocupa todo el ancho y tiene 3 columnas: card | dot | spacer */
 .timeline__item {
   display: grid;
   grid-template-columns: 1fr 24px 1fr;
-  align-items: start;
+  align-items: center;
   gap: 24px;
   margin-bottom: 48px;
   position: relative;
@@ -104,9 +103,11 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  margin-top: 22px;
   position: relative;
   z-index: 1;
+  align-self: center;
+  justify-self: center;
+  margin: 0;
 }
 
 .timeline__dot--work {
