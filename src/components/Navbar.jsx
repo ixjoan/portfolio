@@ -24,7 +24,7 @@ export default function Navbar() {
   ]
 
   return (
-    <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+    <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${menuOpen ? 'navbar--open' : ''}`}>
       <div className="navbar__inner container">
         {/* Logo */}
         <a href="#" className="navbar__logo">

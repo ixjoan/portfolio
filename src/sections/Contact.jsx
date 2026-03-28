@@ -72,7 +72,7 @@ export default function Contact() {
         <div className="contact__footer">
           <p>© 2026 Joan Montero. Todos los derechos reservados.</p>
           <p className="contact__made-with">
-            Hecho con React + Vite ⚡
+            Hecho con React + Vite
           </p>
         </div>
       </div>

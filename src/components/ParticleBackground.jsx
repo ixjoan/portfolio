@@ -3,18 +3,23 @@ import './ParticleBackground.css'
 
 export default function ParticleBackground() {
   const canvasRef = useRef(null)
+  const cursorRef = useRef(null)
 
   useEffect(() => {
     const canvas = canvasRef.current
+    const cursorCanvas = cursorRef.current
     const ctx = canvas.getContext('2d')
+    const cursorCtx = cursorCanvas.getContext('2d')
     let animId
     let particles = []
-    let mouseTarget = { x: 0, y: 0 }
-    let mouseSmooth = { x: 0, y: 0 }
+    let mouseTarget = { x: -100, y: -100 }
+    let mouseSmooth = { x: -100, y: -100 }
 
     function init() {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
+      cursorCanvas.width = window.innerWidth
+      cursorCanvas.height = window.innerHeight
       mouseTarget = { x: -100, y: -100 }
       mouseSmooth = { x: -100, y: -100 }
       particles = []
@@ -32,11 +37,13 @@ export default function ParticleBackground() {
 
     function draw() {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
-      const maxDist = 120
+      cursorCtx.clearRect(0, 0, cursorCanvas.width, cursorCanvas.height)
+
+      const maxDist = 180
       const mouseDist = 150
 
-      mouseSmooth.x += (mouseTarget.x - mouseSmooth.x) * 0.10
-      mouseSmooth.y += (mouseTarget.y - mouseSmooth.y) * 0.10
+      mouseSmooth.x += (mouseTarget.x - mouseSmooth.x) * 0.12
+      mouseSmooth.y += (mouseTarget.y - mouseSmooth.y) * 0.12
 
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i]
@@ -51,7 +58,7 @@ export default function ParticleBackground() {
 
         if (dm < mouseDist) {
           ctx.beginPath()
-          ctx.strokeStyle = `rgba(0, 200, 255, ${1 - dm / mouseDist})`
+          ctx.strokeStyle = `rgba(99, 102, 241, ${(1 - dm / mouseDist) * 0.8})`
           ctx.lineWidth = 0.8
           ctx.moveTo(p.x, p.y)
           ctx.lineTo(mouseTarget.x, mouseTarget.y)
@@ -65,7 +72,7 @@ export default function ParticleBackground() {
           const d = Math.sqrt(dx * dx + dy * dy)
           if (d < maxDist) {
             ctx.beginPath()
-            ctx.strokeStyle = `rgba(180, 200, 255, ${(1 - d / maxDist) * 0.3})`
+            ctx.strokeStyle = `rgba(220, 230, 255, ${(1 - d / maxDist) * 0.2})`
             ctx.lineWidth = 0.5
             ctx.moveTo(p.x, p.y)
             ctx.lineTo(q.x, q.y)
@@ -79,22 +86,23 @@ export default function ParticleBackground() {
         ctx.fill()
       }
 
+      // Cursor en el canvas de encima
       if (window.innerWidth > 768) {
-        ctx.beginPath()
-        ctx.arc(mouseTarget.x, mouseTarget.y, 4, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(0, 200, 255, 1)'
-        ctx.fill()
+      cursorCtx.beginPath()
+      cursorCtx.arc(mouseTarget.x, mouseTarget.y, 4, 0, Math.PI * 2)
+      cursorCtx.fillStyle = 'rgba(99, 102, 241, 1)'
+      cursorCtx.fill()
 
-        ctx.beginPath()
-        ctx.arc(mouseSmooth.x, mouseSmooth.y, 16, 0, Math.PI * 2)
-        ctx.strokeStyle = 'rgba(0, 200, 255, 0.5)'
-        ctx.lineWidth = 1.2
-        ctx.stroke()
-        }
+      cursorCtx.beginPath()
+      cursorCtx.arc(mouseSmooth.x, mouseSmooth.y, 16, 0, Math.PI * 2)
+      cursorCtx.strokeStyle = 'rgba(99, 102, 241, 0.5)'
+      cursorCtx.lineWidth = 1.2
+      cursorCtx.stroke()
+    }
 
       animId = requestAnimationFrame(draw)
     }
-    
+
     const onMouseMove = (e) => {
       mouseTarget.x = e.clientX
       mouseTarget.y = e.clientY
@@ -114,5 +122,10 @@ export default function ParticleBackground() {
     }
   }, [])
 
-  return <canvas ref={canvasRef} className="particle-bg" />
+  return (
+    <>
+      <canvas ref={canvasRef} className="particle-bg" />
+      <canvas ref={cursorRef} className="cursor-bg" />
+    </>
+  )
 }
