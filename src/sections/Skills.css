@@ -36,6 +36,8 @@
   border-radius: var(--radius-lg);
   cursor: default;
   transition: var(--transition);
+  position: relative;
+  z-index: 1;
 }
 
 .skill-card:hover {

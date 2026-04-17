@@ -39,6 +39,8 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   transition: var(--transition);
+  position: relative;
+  z-index: 1;
 }
 
 .about__value-card:hover {

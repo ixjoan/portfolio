@@ -16,7 +16,7 @@ export default function Hero() {
           {/* Badge de disponibilidad */}
           <div className="badge animate-fade-up-delay-1">
             <span className="dot" />
-            Abierto a nuevas oportunidades
+            Disponibilidad Inmediata
           </div>
 
           {/* Nombre grande */}

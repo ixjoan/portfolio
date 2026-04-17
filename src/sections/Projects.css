@@ -30,6 +30,8 @@
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--text-secondary);
+  position: relative;
+  z-index: 1;
 }
 
 .cert-badge .material-symbols-outlined {
@@ -53,6 +55,8 @@
   display: flex;
   flex-direction: column;
   transition: var(--transition);
+  position: relative;
+  z-index: 1;
 }
 
 .project-card:hover {
